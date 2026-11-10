@@ -1,0 +1,53 @@
+{
+  "test_month": "2026-03",
+  "train_flights": 1019618,
+  "test_flights": 592256,
+  "train_delay_rate": 0.20274848031321535,
+  "test_delay_rate": 0.24319044467257403,
+  "baseline_roc_auc": 0.5,
+  "models": {
+    "A": {
+      "name": "carrier + origin + destination",
+      "roc_auc": 0.5824,
+      "pr_auc": 0.3063
+    },
+    "B": {
+      "name": "A + scheduled departure hour",
+      "roc_auc": 0.632,
+      "pr_auc": 0.3449
+    },
+    "C": {
+      "name": "B + day of week",
+      "roc_auc": 0.6343,
+      "pr_auc": 0.3443
+    }
+  },
+  "served_model": "C",
+  "features": [
+    "OP_UNIQUE_CARRIER",
+    "ORIGIN",
+    "DEST",
+    "DOW",
+    "HOUR_SIN",
+    "HOUR_COS"
+  ],
+  "date_min": "2026-01-01",
+  "date_max": "2026-03-31",
+  "total_flights": 1611874,
+  "overall_delay_rate": 0.21760820014467633,
+  "carriers": [
+    "AA",
+    "AS",
+    "B6",
+    "DL",
+    "F9",
+    "G4",
+    "MQ",
+    "NK",
+    "OH",
+    "OO",
+    "UA",
+    "WN",
+    "YX"
+  ]
+}

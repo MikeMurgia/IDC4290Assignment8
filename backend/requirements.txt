@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+joblib
+pyarrow
+openpyxl
+airportsdata
+fastapi
+uvicorn
