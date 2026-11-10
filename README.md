@@ -11,13 +11,15 @@ An interactive React + FastAPI data product built on the BTS On-Time Reporting d
 ```bash
 pip install -r backend/requirements.txt
 
-# 1. Put the three BTS files (.csv or .xlsx) in data/, then train + aggregate (~1 min)
+
+# NOT NECESSARY, only needed to be ran once, artifacts were pushed
+# Put the three BTS files (.csv or .xlsx) in data/, then train + aggregate (~1 min)
 python backend/prepare.py --data data/
 
-# 2. Build the React app
+# 1. Build the React app
 cd frontend && npm install && npm run build && cd ..
 
-# 3. Serve API + app on http://localhost:8000
+# 2. Serve API + app on http://localhost:8000
 uvicorn backend.app:app --port 8000
 ```
 
